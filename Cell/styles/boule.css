@@ -1,0 +1,90 @@
+body{
+    background-image: url('../img/fondCoffre.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.containerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;       
+    width: 200px;
+}
+
+.buttonReturn{
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.buttonReturn a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttonReturn:hover {
+    background-color: #ff4081;
+}
+
+
+.containerPuzzle{
+    margin-top: 30%;
+}
+
+#puzzle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    max-width: 90%;
+  }
+  
+  #puzzle p {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  #puzzle input[type="text"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  #puzzle button {
+    background-color: #ff80ab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  #puzzle button:hover {
+    background-color: #ff4081;
+  }
+  
+  #success {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

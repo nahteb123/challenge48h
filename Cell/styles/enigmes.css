@@ -1,0 +1,49 @@
+body {
+    font-family: sans-serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-image: url('../img/fondEnigmes.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.character {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+.question-box {
+    margin-top: 30px;
+}
+
+
+.containerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;       
+    width: 200px;
+}
+
+.buttonReturn{
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.buttonReturn a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttonReturn:hover {
+    background-color: #ff4081;
+}
