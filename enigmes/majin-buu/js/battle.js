@@ -290,7 +290,11 @@ document
   .addEventListener("click", function () {
     console.log("Sélection du joueur deux activée !");
     choicePersona = "player2";
-
+    document.querySelectorAll(".card-player").forEach(c => c.classList.remove("active"));
+        
+    // Ajoute la classe active à la carte cliquée
+    card.classList.add("active");
+      //selectCardStyle
     // Désactiver les événements de sélection du joueur 1
     document.querySelectorAll(".selectPlayer").forEach((card) => {
       card.removeEventListener("click", selectPlayerOne);
