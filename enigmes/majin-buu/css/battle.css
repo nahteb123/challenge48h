@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Saiyan-Sans';
-    src: url('/challenge48h/enigmes/majin-buu/fonts/Saiyan-Sans.ttf') format('woff');
+    src: url('../fonts/Saiyan-Sans.ttf') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -131,7 +131,7 @@ img {
 
 .header {
     -webkit-text-stroke: 1px #000000c5;
-    font-family: 'Saiyan-Sans';
+    font-family: 'Saiyan-Sans', serif;
     font-size: 3rem;
     font-weight: 300;
     color: #f4e544;
@@ -230,7 +230,7 @@ margin: 1rem;
 
 
 .introduce-player {
-    font-family: 'Saiyan-Sans';
+    font-family: 'Saiyan-Sans', serif;
     font-size: 2rem;
     font-weight: 300;
     text-overflow: ellipsis;

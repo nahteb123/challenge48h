@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Test Saiyan Ultime</title>
+    <link rel="stylesheet" href="raditz.css">
+    <script defer src="raditz.js"></script>
 </head>
 <body>
+
+<div class="container">
+    <h1>📡 Calibration du Scouter</h1>
+    <p>Le Scouter de Raditz est détraqué ! Calibre-le pour obtenir le vrai niveau de puissance.</p>
+
+    <div class="scouter">
+        <img src="raditz-scouter.png" alt="Scouter">
+        <p id="power-display">???</p>
+    </div>
+
+    <div class="jauge-container">
+        <div id="jauge"></div>
+    </div>
+
+    <button id="calibrate-btn">🔧 Tenter la Calibration</button>
+    <p id="result"></p>
+
+    <!-- 🌟 Énigme finale (cachée au début) -->
+    <div id="final-enigma" class="hidden">
+        <h2>🔥 Épreuve Finale !</h2>
+        <p>Raditz te pose une dernière question :</p>
+        <p><strong>Quel guerrier Saiyan a atteint le Super Saiyan en premier dans l'histoire ?</strong></p>
+
+        <button class="answer-btn" data-answer="A">A) Goku</button>
+        <button class="answer-btn" data-answer="B">B) Broly</button>
+        <button class="answer-btn" data-answer="C">C) Bardock</button>
+        <button class="answer-btn" data-answer="D">D) Yamoshi</button>
+
+        <p id="final-result"></p>
+        <button id="menu-btn">🏠 Retour au Menu</button>
+
+    </div>
+</div>
 
 </body>
 </html>
