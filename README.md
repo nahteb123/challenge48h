@@ -45,8 +45,8 @@ Le joueur devra interagir avec **plusieurs personnages**, résoudre des **énigm
 ### 1. 📥 Clone du projet
 
 ```bash
-git clone https://github.com/votre-utilisateur/nom-du-repo.git
-cd nom-du-repo
+git clone https://github.com/nahteb123/challenge48h.git
+cd challenge48h
 ```
 
 ### 2. ▶️ Lancer le projet
