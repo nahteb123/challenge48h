@@ -340,7 +340,7 @@ async function getResult() {
         localStorage.setItem("dragon_ball", JSON.stringify(dragon_ball));
 
     alert("Vous avez trouvé la bonne combinaison !");
-    window.location.href = "../../../index.html";
+    window.location.href = '/challenge48h/index.html';
   } else {
     alert("Perdu !");
   }
