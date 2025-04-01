@@ -31,7 +31,7 @@ function verifierReponse() {
       dragon_ball.nombre += 1;
       localStorage.setItem("dragon_ball", JSON.stringify(dragon_ball));
 
-      window.location.href = "../../../index.html";
+      window.location.href = '/challenge48h/index.html';
     }, 2000);
   } else {
     messageValidation.textContent = 'Réponse incorrecte ! Essayez encore !';
