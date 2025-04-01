@@ -156,6 +156,8 @@ let player2 =
 console.log(player1);
 console.log(player2);
 
+
+
 // Génération de l'indice
 function generateHint() {
   while (player1.name === player2.name) {
@@ -290,10 +292,7 @@ document
   .addEventListener("click", function () {
     console.log("Sélection du joueur deux activée !");
     choicePersona = "player2";
-    document.querySelectorAll(".card-player").forEach(c => c.classList.remove("active"));
-        
-    // Ajoute la classe active à la carte cliquée
-    card.classList.add("active");
+
       //selectCardStyle
     // Désactiver les événements de sélection du joueur 1
     document.querySelectorAll(".selectPlayer").forEach((card) => {
@@ -308,7 +307,21 @@ document
     console.log("Mode de sélection : ", choicePersona);
   });
 
-function getResult() {
+  function checkAndStoreSpecialTime() {
+    // Vérifier si la clé existe déjà dans le localStorage
+    if (localStorage.getItem("specialKey")) {
+        alert("La clé a déjà été générée précédemment. Elle ne sera pas régénérée.");
+        return; // Ne rien faire si la clé existe déjà
+    }
+
+
+    if (selectedHour === 13 && selectedMinute === 15) {
+        let randomString = generateRandomString(10);
+        localStorage.setItem("specialKey", randomString);
+        alert(`🎉 Clé spéciale générée et stockée. Inspecte bien toute la page.`);
+    }
+}
+async function getResult() {
     console.log(tabChoice[0].name)
     console.log(player1.name)
     console.log(tabChoiceTwo[0].name)
@@ -319,7 +332,15 @@ function getResult() {
     (tabChoice[0].name === player2.name &&
       tabChoiceTwo[0].name === player1.name)
   ) {
+
+    const storedKey = localStorage.getItem("specialKey");
+
+        localStorage.removeItem("specialKey"); // Supprime la clé après utilisation
+        dragon_ball.nombre += 1;
+        localStorage.setItem("dragon_ball", JSON.stringify(dragon_ball));
+
     alert("Vous avez trouvé la bonne combinaison !");
+    window.location.href = "../../../index.html";
   } else {
     alert("Perdu !");
   }
