@@ -1,20 +1,20 @@
 const riddles = [
-    {
-      question: "Plus tu en prends, plus tu en laisses. Que suis-je ?",
-      answer: "des pas",
-      infos: ["N'aime pas parler de son intimité", "Aime la musique classique"]
-    },
-    {
-      question: "Je peux remplir une pièce sans prendre de place. Que suis-je ?",
-      answer: "la lumière",
-      infos: ["N'aime pas la Terre", "Déteste les riches"]
-    },
-    {
-      question: "Je suis toujours devant toi, mais tu ne peux jamais m’atteindre. Que suis-je ?",
-      answer: "le futur",
-      infos: ["Aime ce qui fait peur", "A une aversion pour l’humanité"]
-    }
-  ];
+  {
+    question: "Plus tu en prends, plus tu en laisses. Que suis-je ?",
+    answer: "des pas",
+    infos: ["Il déteste les gens qui se vantent", "Il se voit comme une entité parfaite"]
+  },
+  {
+    question: "Je peux remplir une pièce sans prendre de place. Que suis-je ?",
+    answer: "la lumière",
+    infos: ["Il adore les créatures dominantes", "Il apprécie les questions profondes"]
+  },
+  {
+    question: "Je suis toujours devant toi, mais tu ne peux jamais m'atteindre. Que suis-je ?",
+    answer: "le futur",
+    infos: ["Il a une obsession pour la destruction", "Il ne résiste pas aux gens qui veulent le connaître vraiment"]
+  }
+];
   
   let solved = [];
   
