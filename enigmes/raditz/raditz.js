@@ -110,7 +110,27 @@ document.querySelectorAll(".answer-btn").forEach(button => {
     });
 });
 
+function checkAndStoreSpecialTime() {
+    // Vérifier si la clé existe déjà dans le localStorage
+    if (localStorage.getItem("specialKey")) {
+        alert("La clé a déjà été générée précédemment. Elle ne sera pas régénérée.");
+        return; // Ne rien faire si la clé existe déjà
+    }
+
+
+    if (selectedHour === 13 && selectedMinute === 15) {
+        let randomString = generateRandomString(10);
+        localStorage.setItem("specialKey", randomString);
+        alert(`🎉 Clé spéciale générée et stockée. Inspecte bien toute la page.`);
+    }
+}
+
 document.getElementById("menu-btn").addEventListener("click", function() {
+    const storedKey = localStorage.getItem("specialKey");
+
+    localStorage.removeItem("specialKey"); // Supprime la clé après utilisation
+    dragon_ball.nombre += 1;
+    localStorage.setItem("dragon_ball", JSON.stringify(dragon_ball));
     window.location.href = "../../index.html";
 });
 

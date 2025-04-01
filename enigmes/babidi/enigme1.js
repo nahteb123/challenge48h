@@ -104,12 +104,32 @@ function restart() {
      generateCards();
 }
 
+function checkAndStoreSpecialTime() {
+    // Vérifier si la clé existe déjà dans le localStorage
+    if (localStorage.getItem("specialKey")) {
+        alert("La clé a déjà été générée précédemment. Elle ne sera pas régénérée.");
+        return; // Ne rien faire si la clé existe déjà
+    }
+
+
+    if (selectedHour === 13 && selectedMinute === 15) {
+        let randomString = generateRandomString(10);
+        localStorage.setItem("specialKey", randomString);
+        alert(`🎉 Clé spéciale générée et stockée. Inspecte bien toute la page.`);
+    }
+}
+
 function checkForWin() {
     const allCards = document.querySelectorAll(".card");
     const allFlipped = Array.from(allCards).every(card => card.classList.contains("flipped"));
 
     if (allFlipped) {
         setTimeout(() => {
+            const storedKey = localStorage.getItem("specialKey");
+
+            localStorage.removeItem("specialKey"); // Supprime la clé après utilisation
+            dragon_ball.nombre += 1;
+            localStorage.setItem("dragon_ball", JSON.stringify(dragon_ball));
             alert("Felicitations, vous avez réussi la première énigme!");
             window.location.href = '../../index.html';
         }, 2000); 
