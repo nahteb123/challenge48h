@@ -1,8 +1,9 @@
 body{
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 100%;
+    min-width: 100%;
     background-color: #12181f;
     color: white;
+    overflow-x: hidden;
 }
 
 h1{
@@ -28,6 +29,7 @@ p{
     border-radius: 10px;
     background-color: #27ae60;
     color: white;
+
 }
 
 .grid-container{
@@ -45,11 +47,11 @@ p{
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
-    transform: rotateY(0); /* Show the back by default */
+    transform: rotateY(0); 
 }
 
 .card.flipped {
-    transform: rotateY(180deg); /* Flip to show the front */
+    transform: rotateY(180deg); 
 }
 
 .front,

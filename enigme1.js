@@ -79,6 +79,7 @@ function disableCards() {
 
     resetBoard();
     lockBoard = false; // Unlock the board after disabling cards
+    checkForWin(); // Check for win after disabling cards
 }
 
 function unflipCards() {
@@ -101,4 +102,16 @@ function restart() {
      document.querySelector(".score").textContent = score;
      gridContainer.innerHTML ="";
      generateCards();
+}
+
+function checkForWin() {
+    const allCards = document.querySelectorAll(".card");
+    const allFlipped = Array.from(allCards).every(card => card.classList.contains("flipped"));
+
+    if (allFlipped) {
+        setTimeout(() => {
+            alert("Felicitations, vous avez réussi la première énigme!");
+            window.location.href = '../../../index.html';
+        }, 2000); 
+    }
 }
