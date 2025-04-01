@@ -111,7 +111,7 @@ function checkForWin() {
     if (allFlipped) {
         setTimeout(() => {
             alert("Felicitations, vous avez réussi la première énigme!");
-            window.location.href = '../../../index.html';
+            window.location.href = '../../index.html';
         }, 2000); 
     }
 }

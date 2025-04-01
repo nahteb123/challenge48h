@@ -171,3 +171,26 @@ input[type="text"] {
 .buttonReturn:hover {
     background-color: #ff4081;
 }
+
+
+#restartBtn {
+    display: none;
+    background-color: #ff80ab;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 30px auto 0;
+    display: block;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 45%;
+    margin-top: -20px;
+  }
+  
+  #restartBtn:hover {
+    background-color: #ff4081;
+  }
+  

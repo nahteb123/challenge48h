@@ -111,7 +111,7 @@ document.querySelectorAll(".answer-btn").forEach(button => {
 });
 
 document.getElementById("menu-btn").addEventListener("click", function() {
-    window.location.href = "/challenge48h/index.html";
+    window.location.href = "../../index.html";
 });
 
 

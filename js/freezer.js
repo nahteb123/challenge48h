@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let selectedHour = 0;
     let selectedMinute = 0;
+    let dragon_ball = JSON.parse(localStorage.getItem("dragon_ball"));
 
     function updateTimeDisplay() {
         let hour = selectedHour.toString().padStart(2, "0");
@@ -70,27 +71,29 @@ document.addEventListener("DOMContentLoaded", function () {
             return; // Ne rien faire si la clé existe déjà
         }
 
-        // Si l'heure est 15:15, générer et stocker une nouvelle clé
-        if (selectedHour === 8 && selectedMinute === 15) {
+
+        if (selectedHour === 13 && selectedMinute === 15) {
             let randomString = generateRandomString(10);
             localStorage.setItem("specialKey", randomString);
-            alert(`🎉 Clé spéciale générée et stockée :`);
+            alert(`🎉 Clé spéciale générée et stockée. Inspecte bien toute la page.`);
         }
     }
 
     function verifyKeyAndRedirect() {
-        // Récupérer la valeur entrée par l'utilisateur et enlever les espaces
-        const enteredKey = keyInput.value.replace(/\s+/g, '').trim(); // Supprimer tous les espaces
-
-        const storedKey = localStorage.getItem("specialKey"); // Récupérer la clé stockée
+        const enteredKey = keyInput.value.replace(/\s+/g, '').trim();
+        const storedKey = localStorage.getItem("specialKey");
 
         if (enteredKey === storedKey) {
-            window.location.href = "test.html"; // Rediriger vers test.html
+            localStorage.removeItem("specialKey"); // Supprime la clé après utilisation
+            dragon_ball.nombre += 1;
+            localStorage.setItem("dragon_ball", JSON.stringify(dragon_ball));
+            window.location.href = "../../index.html";
         } else {
             errorMessage.textContent = "❌ Clé incorrecte. Essayez à nouveau.";
-            errorMessage.style.color = "red"; // Afficher un message d'erreur
+            errorMessage.style.color = "red";
         }
     }
+
 
     nextHourButton.addEventListener("click", () => changeHour(1));
     prevHourButton.addEventListener("click", () => changeHour(-1));

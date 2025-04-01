@@ -1,44 +1,44 @@
 const questions = [
-    {
-      text: "Quelle est ta plus grande qualité ?",
-      choices: ["J'ai une Porsche Taycan", "J'écoute vraiment les gens", "Je suis un mec mystérieux", "Je suis un bon cuisinier"],
-      correct: 1
-    },
-    {
-      text: "A quoi je ressemble ?",
-      choices: ["Une pizza épinard", "Un super guerrier", "Peu importe je t'aime", "La fouine"],
-      correct: 1
-    },
-    {
-      text: "Ton animal préféré ?",
-      choices: ["Le requin", "Le chat", "Le moustique", "Le singe"],
-      correct: 1
-    },
-    {
-      text: "Pose-moi une question :",
-      choices: ["Bodycount ?", "Quel est ton plus grand souhait ?", "Tu veux un café ?", "Pour quelle raison te lèves-tu le matin ?"],
-      correct: 1
-    },
-    {
-      text: "Pulvériser la terre. Dis moi, tu penses que je suis :",
-      choices: ["Un mystère intrigant", "Dangereux", "A éviter dans la vie", "Un bon ami"],
-      correct: 2
-    },
-    {
-      text: "Et si je te disais que j'ai un secret ?",
-      choices: ["ARRETEEEEE", "Dis moi tout", "Tu bluffes", "Je suis pas intéressé"],
-      correct: 1
-    }
-  ];
+  {
+    text: "Quelle est ta plus grande qualité ?",
+    choices: ["J'ai une Porsche Taycan", "J'écoute vraiment les gens", "Je suis un mec mystérieux", "Je suis un bon cuisinier"],
+    correct: 1
+  },
+  {
+    text: "A quoi je ressemble ?",
+    choices: ["Une pizza épinard", "Un scarabé", "Un super guerrier", "Ce dont j'ai toujours révé"],
+    correct: 2
+  },
+  {
+    text: "Ton animal préféré ?",
+    choices: ["Le requin", "Le chat", "Le moustique", "Le singe"],
+    correct: 0
+  },
+  {
+    text: "Pose-moi une question :",
+    choices: ["Bodycount ?", "Quel est ton plus grand souhait ?", "Tu veux un café ?", "Pour quelle raison te lèves-tu le matin ?"],
+    correct: 1
+  },
+  {
+    text: "Pulvériser la terre. Dis moi, tu penses que je suis :",
+    choices: ["Un mystère intrigant", "Dangereux", "A éviter dans la vie", "Un bon ami"],
+    correct: 2
+  },
+  {
+    text: "Et si je te disais que j'ai un secret ?",
+    choices: ["Dis moi tout", "ARRETEEEE", "Tu bluffes", "Je suis pas intéressé"],
+    correct: 0
+  }
+];
+
 
   let currentQuestion = 0;
   let vies = 3;
 
-  // Charger les indices depuis localStorage
 function loadCellHints() {
   const hints = JSON.parse(localStorage.getItem("cellHints") || "[]");
   const list = document.getElementById("cellHintsList");
-  list.innerHTML = ""; // vider d'abord
+  list.innerHTML = ""; 
 
   hints.forEach(hint => {
     const li = document.createElement("li");
@@ -88,7 +88,7 @@ setTimeout(() => {
         document.getElementById("reward").style.display = "block";
         document.getElementById("puzzle").style.display = "block";
         document.getElementById("choices").innerHTML = "";
-        document.getElementById("question-text").textContent = "Elle te regarde dans les yeux...";
+        document.getElementById("question-text").textContent = "Il te regarde dans les yeux...";
       }
     } else {
         vies--;
@@ -112,10 +112,10 @@ setTimeout(() => {
           document.getElementsByClassName("madImage")[0].style.visibility = "hidden";
         }, 900);
 
-
- 
         document.getElementById("choices").innerHTML = "";
-        document.getElementById("question-text").textContent = "Elle te regarde dans les yeux...";
+        document.getElementById("question-text").textContent = "Tu mérites pas mon intérêt.";
+        document.getElementById("restartBtn").style.display = "inline-block";
+
     }
   }
 
@@ -129,6 +129,23 @@ setTimeout(() => {
       success.textContent = "Nope. Mauvais code.";
     }
   }
+
+  function restartGame() {
+    currentQuestion = 0;
+    vies = 3;
+    document.getElementById("vies").textContent = "Vies restantes : " + vies;
+    document.getElementById("response").textContent = "";
+    document.getElementById("choices").innerHTML = "";
+    document.getElementById("question-text").textContent = "";
+  
+    document.getElementsByClassName("madImage")[0].style.visibility = "hidden";
+    document.getElementsByClassName("coeurImage")[0].style.visibility = "hidden";
+  
+    document.getElementById("restartBtn").style.display = "none";
+  
+    showQuestion(); 
+  }
+  
 
   showQuestion();
 
