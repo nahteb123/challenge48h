@@ -1,0 +1,39 @@
+[
+    {
+        "img": "./assets/Babidi.webp",
+        "name": "Babidi"
+    },
+    {
+        "img": "./assets/Buu.webp",
+        "name": "Buu"
+    },
+    {
+        "img": "./assets/Freezer.webp",
+        "name": "Freezer"
+    },
+    {
+        "img": "./assets/Krillin.webp",
+        "name": "Krillin"
+    },
+    {
+        "img": "./assets/MrSatan.webp",
+        "name": "Mr. Satan"
+    },
+    {
+        "img": "./assets/Piccolo.webp",
+        "name": "Piccolo"
+    },
+    {
+        "img": "./assets/Trunks.webp",
+        "name": "Trunks"
+    },
+    {
+        "img": "./assets/Vegeta.webp",
+        "name": "Vegeta"
+    },
+    {
+        "img": "./assets/Zeno.webp",
+        "name": "Zeno"
+    }
+
+]
