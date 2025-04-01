@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffre</title>
+    <link rel="stylesheet" href="../styles/boule.css">
+</head>
+<body> 
+    
+    <div class="containerButton">
+        <button class="buttonReturn">
+            <a href="../cell.html">Retour</a>
+        </button>
+    </div>
+
+    <div id="puzzle">
+        <p>Entre le code pour déverrouiller l'énigme :</p>
+        <input type="text" id="codeInput" placeholder="Code à 4 chiffres">
+        <button onclick="checkCode()">Valider</button>
+        <div id="success"></div>
+      
+        <div id="dragonball-reveal" style="display: none; text-align: center; margin-top: 20px;">
+          <p>Bravo ! Il y avait une Dragon Ball à l'intérieur !</p>
+          <img src="../img/dragonball.jpg" alt="Dragon Ball" width="120">
+          <br><br>
+          <button onclick="goNext()" class="next-btn">Étape suivante</button>
+        </div>
+      </div>
+      
+      
+    <script>
+        function checkCode() {
+        const code = document.getElementById('codeInput').value;
+        const success = document.getElementById('success');
+        const reward = document.getElementById('dragonball-reveal');
+
+        if (code === "4829") {
+            success.textContent = "";
+            reward.style.display = "block";
+        } else {
+            success.textContent = "❌ Nope. Mauvais code.";
+            reward.style.display = "none";
+        }
+        }
+
+        function goNext() {
+        window.location.href = "etape2.html"; //a changer par l'URL de la prochaine étape
+        }
+
+
+
+    </script>
+</body>
+</html>
