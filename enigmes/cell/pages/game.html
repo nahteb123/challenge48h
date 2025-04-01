@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drague Cell</title>
+    <link rel="stylesheet" href="../styles/game.css">
+</head>
+<body>
+
+    <div class="containerButton">
+      <button class="buttonReturn">
+          <a href="../cell.html">Retour</a>
+      </button>
+    </div>
+    <div class="containerVies">
+      <h1 id="vies">Vies restantes : 3</h1>
+    </div>
+
+    <div>
+      <img src="../img/Cell.webp" alt="cellmax" class="cellImage">
+      <img src="../img/38812.webp" class="madImage" alt="haine">
+      <img src="../img/heart_98495.webp" class="coeurImage" alt="coeur">
+    </div>
+
+    <div class="cellPreferences">
+      <h1>Préférences de Cell :</h1>
+      <ul id="cellHintsList">
+      </ul>
+    </div>
+    
+    <div id="game-container">
+        <h2>Cell te demande :</h2>
+        <p id="question-text">Chargement...</p>
+        <div id="response"></div>
+        <div id="choices"></div>
+        <div id="reward">
+          Voici le code que tu cherches : <b>4829</b>
+        </div>
+        <button id="restartBtn" style="display: none;" onclick="restartGame()">🔁 Recommencer</button>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Saiyan Sans';
+  src: url('../../../../fonts/Saiyan-Sans.ttf') format('truetype');
+}
+
+body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  cursor: none;
+}
+
+.lampe {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.75) 15%,
+    rgba(0, 0, 0, 0.9) 85%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.reponse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  border-radius: 5px;
+  width: 250px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.reponse:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%) scale(1.01);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.reponse::placeholder {
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.reponse:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.texte-revele {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  color: black;
+}
+
+.message-validation {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: bold;
+}
+
+.image-cachee {
+  display: none;
+}
+
+.texte-base {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  color: black;
+}

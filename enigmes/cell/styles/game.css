@@ -1,0 +1,196 @@
+body {
+    font-family: sans-serif;
+    background: #fce4ec;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-image: url('../img/fondGame.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#game-container {
+    width: 100vw;
+    margin: auto;
+    padding: 20px;
+
+    background: white;
+    box-shadow: 0 0 10px #aaa;
+    position: absolute;
+    bottom: 0;
+}
+
+#game-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-container p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.choice {
+    flex: 0 1 calc(50% - 20px); 
+    margin: 5px;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+
+.choice:hover {
+    background-color: #ff4081;
+}
+
+#choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    width: 60vw;
+}
+
+
+#response, #reward, #puzzle, #success {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#response{
+    display: flex;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 150px;
+    top: 0;
+}
+
+#reward {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+
+#reward, #puzzle {
+    display: none;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cellPreferences{
+    display: flex;
+    flex-direction: column;
+    position: absolute;   
+    margin-bottom: 10px;
+    right: 0;
+    bottom: 45%;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 400px;
+    padding: 0 20px;
+    box-shadow: 0 0 12px #aaa;
+    padding-bottom: 30px;
+}
+
+.cellImage{
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.madImage{
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    left: 180px;
+    margin-top: 100px;
+    visibility: hidden;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+}
+
+.coeurImage{
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    rotate: -30deg;
+    left: 180px;
+    margin-top: 100px;
+    visibility: hidden;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+}
+
+#vies{
+    margin-left: 30px;
+    position: absolute;
+    right: 30px;
+
+}
+
+.containerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;       
+    width: 200px;
+}
+
+.buttonReturn{
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.buttonReturn a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttonReturn:hover {
+    background-color: #ff4081;
+}
+
+
+#restartBtn {
+    display: none;
+    background-color: #ff80ab;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 30px auto 0;
+    display: block;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 45%;
+    margin-top: -20px;
+  }
+  
+  #restartBtn:hover {
+    background-color: #ff4081;
+  }
+  

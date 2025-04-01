@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Les 3 informateurs</title>
+  <link rel="stylesheet" href="../styles/enigmes.css">
+</head>
+<body>
+
+  <div class="containerButton">
+    <button class="buttonReturn">
+        <a href="../cell.html">Retour</a>
+    </button>
+  </div>
+
+  <h1>Trouve la réponse aux énigmes des informateurs,<br> 
+      ils te donneront un indice sur Cell.
+  </h1>
+
+  <div class="character" onclick="askRiddle(0)">
+    <img src="../img/trunks.webp" height="450"><br>
+  </div>
+  <div class="character" onclick="askRiddle(1)">
+    <img src="../img/c18.webp" height="450"><br>
+  </div>
+  <div class="character" onclick="askRiddle(2)">
+    <img src="../img/Piccolo.webp" height="450"><br>
+  </div>
+
+  <div class="question-box" id="question-box"></div>
+
+</body>
+<script src="../scripts/script-enigmes.js"></script>
+</html>
